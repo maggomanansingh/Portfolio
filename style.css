@@ -20,6 +20,7 @@ nav {
     color: aliceblue;
     align-items: center;
     padding: 10px;
+    z-index: 1000;
 }
 
 nav ul {
@@ -91,9 +92,16 @@ nav ul li a {
     border: 2px solid #3828c9;
     border-radius: 20px;
     font-size: 20px;
+    transition: all 0.3s ease;
 }
 
-.btn a{
+.btn:hover {
+    background-color: #3828c9;
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.btn a {
     color: khaki;
     text-decoration: none;
 
@@ -120,6 +128,12 @@ nav ul li a {
     width: 75vw;
     background-color: rgb(204, 208, 212);
     border-radius: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project:hover {
+    transform: scale(1.02);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 .project-img {
@@ -166,13 +180,50 @@ nav ul li a {
 }
 
 @media screen and (max-width: 750px) {
-    .nav {
+    nav {
         flex-direction: column;
-        /* justify-content: center; */
         align-items: center;
         gap: 12px;
     }
 
+    .hero {
+        flex-direction: column-reverse;
+        height: auto;
+        padding-top: 150px;
+        padding-bottom: 50px;
+        gap: 14px;
+        text-align: center;
+    }
 
+    .hero-right img {
+        width: 50vw;
+        height: 59vh;
+    }
 
+    .hero-left {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero-left .one {
+        font-size: 40px;
+    }
+
+    #para {
+        width: 80vw;
+    }
+
+    #Headin {
+        font-size: 32px;
+    }
+
+    #project-2 {
+        width: 50vw;
+        height: 60vh;
+    }
+
+    #para {
+        width: 75vw;
+    }
 }
